@@ -6,8 +6,9 @@ const { create } = require('./models/user.model');
 //Carga del fichero de entorno
 require('dotenv').config();
 
+//Linea comentado para subirlo con SourceTree Gihub
 //Carga de la base de datos
-require('./config/db');
+//require('./config/db');
 
 const app = express();
 const bot = new Telegraf(process.env.BOT_TOKEN);
@@ -21,7 +22,9 @@ app.post('/url/telegram', (req, res) => {
     res.send('Termina');
 });
 
+//Linea comentada para subirlo con SourceTree Github
 //MIDDLEWARE
+/*
 bot.use(async (ctx, next) => {
     console.log(ctx.from);
     try {
@@ -33,7 +36,7 @@ bot.use(async (ctx, next) => {
 
     }
 });
-
+*/
 
 //COMANDOS
 //test
